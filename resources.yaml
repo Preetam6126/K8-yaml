@@ -9,11 +9,13 @@ spec:
     imagePullPolicy: Always
     name: limiting
     resources:
-      cpu: "150m"
-      mem: "256Mi"
-    limits:
-      cpu: "200m"
-      memory: "230Mi"
-      #stress-ng --help
-      
-        
+      requests:
+        cpu: "150m"
+        memory: "256Mi"
+      limits:
+        cpu: "500m"
+        memory: "300Mi"
+        #stress-ng --help  
+    
+
+
