@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: label-pods
+  labels:
+    course: docker
+    duration: 25hr
+    instructor: preetam
+spec:
+  containers:
+  - image: nginx
+    name: nginx
