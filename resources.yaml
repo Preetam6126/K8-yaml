@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: limiting
+  namespace: preetam
+spec:
+  containers:
+  - image: nginx
+    imagePullPolicy: Always
+    name: limiting
+    
