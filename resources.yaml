@@ -8,4 +8,12 @@ spec:
   - image: nginx
     imagePullPolicy: Always
     name: limiting
-    
+    resources:
+      cpu: "150m"
+      mem: "256Mi"
+    limits:
+      cpu: "200m"
+      memory: "230Mi"
+      #stress-ng --help
+      
+        
