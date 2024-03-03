@@ -6,6 +6,9 @@ spec:
   containers:
   - image: nginx
     name: nginx-config
+    envFrom:
+     - configMapRef:
+         name: course-config
     # env:
     # - name: course
     #   valueFrom:
@@ -17,6 +20,4 @@ spec:
     #     configMapKeyRef:
     #       name: course-config
     #       key: duration
-      envFrom:
-       - configMapRef:
-           name: course-config
+
