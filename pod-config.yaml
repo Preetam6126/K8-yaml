@@ -18,5 +18,5 @@ spec:
     #       name: course-config
     #       key: duration
       envFrom:
-      - configMapRef:
-          name: course-config
+       - configMapRef:
+           name: course-config
