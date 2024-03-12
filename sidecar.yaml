@@ -10,13 +10,10 @@ spec:
       image: nginx
       volumeMounts:
         - name: shared-logs
-          mounthPath: /var/log/ningx
+          mountPath: /var/log/ningx
     - name: sidecar
       image: busybox
       command: ["sh", "-c" , while true; do cat /var/log/nginx/access.log; sleep 30; done"]
       volumeMounts:
         - name: shared-logs
-          mounthPath: /var/log/nginx    
-  volumes:
-    - name: shared-logs
-      emptyDir: {}
+          mountPath: /var/log/nginx    
