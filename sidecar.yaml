@@ -6,7 +6,7 @@ metadata:
     app: web
 spec:
   containers:
-    - name: webserver
+    - name: webapp
       image: nginx
       volumeMounts:
         - name: shared-logs
