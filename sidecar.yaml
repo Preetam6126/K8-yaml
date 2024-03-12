@@ -17,6 +17,6 @@ spec:
       volumeMounts:
         - name: shared-logs
           mounthPath: /var/log/nginx    
-   volumes:
-     - name: shared-logs
-       emptyDir: {}
+  volumes:
+    - name: shared-logs
+      emptyDir: {}
