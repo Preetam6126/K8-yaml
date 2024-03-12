@@ -11,9 +11,9 @@ spec:
       volumeMounts:
         - name: shared-logs
           mountPath: /var/log/nginx
-    - name: sidecar
+    - name: sidecar-container
       image: busybox
-      command: ["sh", "-c" , while true; do cat /var/log/nginx/access.log; sleep 300; done"]
+      command: ["sh","-c","while true; do cat /var/log/nginx/access.log; sleep 300; done"]
       volumeMounts:
         - name: shared-logs
           mountPath: /var/log/nginx    
