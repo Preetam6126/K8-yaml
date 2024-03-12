@@ -32,7 +32,7 @@ spec:
       - containerPort: 80
   volumes:
   - name: config-vol
-    ConfigMap:
+    configMap:
       name: configvolume # name of configmap
 
 
