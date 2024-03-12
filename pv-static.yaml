@@ -13,7 +13,7 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 50Gi
+    storage: 30Gi
   accessModes:
     - ReadWriteOnce
   awsElasticBlockStore:
