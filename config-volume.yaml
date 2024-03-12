@@ -24,7 +24,7 @@ spec:
         cpu: "500m"
         memory: "300Mi"
     volumeMounts:
-    - name: nginx-conf
+    - name: config-vol
       mountPath: /etc/nginx/nginx.conf
       subPath: nginx.conf #key of configmap data
     ports: 
