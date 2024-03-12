@@ -12,11 +12,11 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 50Gi
+    storage: 30Gi
   accessModes:
     - ReadWriteOnce
   awsElasticBlockStore:
-    volumeID: vol-02845fb571b422179 #replace volume ID
+    volumeID: vol-0cd65afcc82e42f2a #replace volume ID
     fsType: ext4
 ---
 apiVersion: v1
