@@ -23,7 +23,7 @@ spec:
   resources:
     requests:
       storage: 10Gi
-  selectors:
+  selector:
     matchLabels:
       name: ebs-volume1
 ---
@@ -37,7 +37,7 @@ spec:
       image: nginx
       volumeMounts:
       - name: ebs-volume1
-        mountPath: /var/www/html
+        mountPath: /usr/share/nginx/html
   volumes:
     - name: ebs-volume1
       persistentVolumeClaim:
