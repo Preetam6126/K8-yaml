@@ -10,7 +10,7 @@ spec:
       image: nginx
       volumeMounts:
         - name: shared-logs
-          mountPath: /var/log/ningx
+          mountPath: /var/log/nginx
     - name: sidecar
       image: busybox
       command: ["sh", "-c" , while true; do cat /var/log/nginx/access.log; sleep 300; done"]
