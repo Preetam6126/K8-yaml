@@ -1,0 +1,44 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ebs-volume1
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  awsElasticBlockStore:
+    volumeID: vol-02845fb571b422179
+    fsType: ext4
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ebs-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Block
+  resources:
+    requests:
+      storage: 10Gi
+  selectors:
+    matchLabels:
+      name: ebs-volume1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      volumeMounts:
+      - name: ebs-volume1
+        mountPath: /var/www/html
+  volumes:
+    - name: ebs-volume1
+      persistentVolumeClaim:
+        claimName: ebs-pvc
