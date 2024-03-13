@@ -13,7 +13,7 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 30Gi
+    storage: 50Gi
   accessModes:
     - ReadWriteOnce
   awsElasticBlockStore:
@@ -30,7 +30,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi
+      storage: 50Gi
   volumeName: my-ebs-volume
 ---
 apiVersion: v1
